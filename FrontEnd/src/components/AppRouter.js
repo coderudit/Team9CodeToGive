@@ -10,6 +10,7 @@ import Register from "../pages/Register";
 import Meeting from "../pages/Meeting";
 import Sample from "../pages/Sample";
 import Select from "../pages/Select";
+import IdeasPage from "../pages/IdeasPage";
 
 export default function AppRouter() {
   return (
@@ -21,6 +22,7 @@ export default function AppRouter() {
         <Route path="/register" element={<Register />} />
         <Route path="/meeting" element={<Meeting />} />
         <Route path="/sample" element={<Sample />} />
+        <Route path="/ideaPage" element={<IdeasPage />} />
       </Routes>
     </Router>
   );
