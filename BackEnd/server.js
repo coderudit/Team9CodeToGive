@@ -4,7 +4,7 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 const bodyParse = require("body-parser");
-const usersRoute = require("./routers/users");
+const usersRoute = require("./routers/users3");
 const http = require("http");
 const server = http.createServer(app);
 
@@ -35,12 +35,25 @@ app.use(bodyParse.json());
 app.use(morgan("dev"));
 
 // Routes
-app.use("/users", usersRoute);
+//app.use("/users", usersRoute);
+const usersRouter = require("./routers/users");
+const postsRouter = require("./routers/posts");
+const subredditsRouter = require("./routers/subreddits");
+const moderatorsRouter = require("./routers/moderators");
+const commentsRouter = require("./routers/comments");
+const votesRouter = require("./routers/votes");
 
 // Default
 app.get("/", (req, res) => {
   res.status(200).send({ msg: "Hello" });
 });
+
+app.use("/users", usersRouter);
+app.use("/posts", postsRouter);
+app.use("/subreddits", subredditsRouter);
+app.use("/moderators", moderatorsRouter);
+app.use("/comments", commentsRouter);
+app.use("/votes", votesRouter);
 
 app.post("/invite_friends", (req, res) => {
   const { email } = req.body;
@@ -51,10 +64,10 @@ app.post("/invite_friends", (req, res) => {
 
   const message = {
     to: email, //insert email from form over here
-    from: "climapmessage@gmail.com",
-    subject: "Invitation to join Envireo 🌳",
+    from: "parthshahk@gmail.com",
+    subject: "Invitation to join Digital Moment",
     text:
-      "Hello, you are invited to join this Envireo to save the world: \n" +
+      "Hello, you are invited to join the Digital Moment to connect: \n" +
       "https://gregarious-sunflower-12488a.netlify.app/meeting", //insert
   };
 
@@ -63,6 +76,7 @@ app.post("/invite_friends", (req, res) => {
       res.status(200).send({ msg: "Sent message" });
     })
     .catch((error) => {
+      console.error(error.response.body);
       res.status(404).send({ error: error.response.body });
     });
 });
