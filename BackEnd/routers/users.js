@@ -2,10 +2,11 @@ const express = require("express");
 const _ = require("lodash");
 const router = express.Router();
 
-//CockroachDB
+//PostgresDB
 const Pool = require("pg").Pool;
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  ssl: false,
 });
 
 // User ROUTE
@@ -56,12 +57,10 @@ router.post("/login", (req, res) => {
       if (results.rows && results.rows.length > 0) {
         return res.status(200).send(results.rows[0]);
       } else {
-        return res
-          .status(404)
-          .send({
-            username: "Invalid username or password",
-            password: "Invalid username or password",
-          });
+        return res.status(404).send({
+          username: "Invalid username or password",
+          password: "Invalid username or password",
+        });
       }
     }
   );
@@ -69,6 +68,7 @@ router.post("/login", (req, res) => {
 
 // REGISTER
 router.post("/register", (req, res) => {
+  console.log(pool.connectionString);
   const { username, password } = req.body;
   if (_.isEmpty(username)) {
     return res.status(404).send({
