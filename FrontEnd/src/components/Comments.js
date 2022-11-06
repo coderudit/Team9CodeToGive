@@ -1,7 +1,7 @@
 // a component that let user add a post
 
 import React, { Component, useEffect, useState } from 'react';
-
+import Grid from '@mui/material/Grid';
 
 class AddPost extends Component {
 
@@ -19,7 +19,7 @@ class AddPost extends Component {
     }
 
     handleSubmit = (e) => {
-        
+        console.log(this.state);
         e.preventDefault();
         this.props.addPost(this.state);
         this.setState({
@@ -28,15 +28,28 @@ class AddPost extends Component {
         })
     }
 
+    
+
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="title">Title</label>
-                    <input type="text" id="title" onChange={this.handleChange} value={this.state.title} />
-                    <label htmlFor="body">Body</label>
-                    <textarea id="body" onChange={this.handleChange} value={this.state.body}></textarea>
-                    <button>Submit</button>
+                    <Grid container
+                    direction = "column"
+                    spacing = {5}
+                    >
+                        <Grid item>
+                            <input type="text" id="title" onChange={this.handleChange} value={this.state.title} />
+                        </Grid>
+                        <Grid item>
+                            <textarea id="body" onChange={this.handleChange} value={this.state.body}></textarea>
+                        </Grid>
+                        <Grid item>
+                            <button>Submit</button>
+                        </Grid>
+                    </Grid>
+                    
+                    
                 </form>
             </div>
         )

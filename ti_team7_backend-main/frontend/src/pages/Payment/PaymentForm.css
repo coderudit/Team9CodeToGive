@@ -1,0 +1,32 @@
+ /* Author: Sai Sandeep Mutyala (B00872239) */
+@media screen and (max-width: 1000px) {
+    .field {
+        border: 2%;
+        padding: 1%;
+        width: 30% !important;
+    }
+ 
+}
+
+h3 {
+    text-align: center;
+    padding-top: 2%;
+    font-weight: 700;
+    color: rgb(31, 31, 212);
+    font-style: italic;
+}
+
+.field {
+    border: 2%;
+    padding: 1%;
+}
+
+.form {
+    border-style: dotted solid;
+    border: 2px solid rgb(247, 240, 240);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 3%;
+    padding: 2%;
+    box-shadow: -4px 3px 4px 3px #9ab0bb;
+}
