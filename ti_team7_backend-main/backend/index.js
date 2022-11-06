@@ -9,7 +9,8 @@ const paymentRoute = require("./routes/paymentsRoute");
 const ordersRoute = require("./routes/ordersRoute");
 const app = express();
 const path = require("path");
-const feedRoute = require("./routes/feeds")
+const feedRoute = require("./routes/feeds");
+const postsRoute = require("./routes/postsRoute");
 
 dotenv.config();
 
@@ -25,8 +26,9 @@ app.use("/api/experts", expertsRoute);
 
 app.use("/api/users", userRoute);
 app.use(paymentRoute);
-app.use("/api/feed", feedRoute)
+app.use("/api/feed", feedRoute);
 app.use(ordersRoute);
+app.use("/api/posts", postsRoute);
 // app.get("/", (req, res, next) => {
 //   console.log("index route ");
 //   res.status(200).json({
@@ -34,18 +36,18 @@ app.use(ordersRoute);
 //   });
 // });
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.get('/*',function(req, res){
-  res.sendFile(path.join(__dirname, '../frontend/build','index.html'));
-})
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+});
 
 app.get("*", function (req, res) {
   console.log("404 - ");
   res.send("404");
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 
 mongoose
   .connect(
