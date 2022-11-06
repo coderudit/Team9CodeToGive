@@ -21,6 +21,7 @@ import Payments from "../pages/Payments/Payments";
 import PaymentInfoForm from "../pages/Payment/PaymentInfoForm";
 import OrderPlaced from "../pages/OrderPlaced/OrderPlaced";
 import UserView from "../pages/UserProfile/UserView";
+import SubmitIdea from "../pages/SubmitIdea/SubmitIdea";
 
 function Routing() {
   const { initializeAuth, dispatch } = useContext(AppContext);
@@ -73,6 +74,10 @@ function Routing() {
 
     {  pageLink: ROUTES.PROFIE,
       view: UserView,
+    },
+
+    {  pageLink: ROUTES.IDEASUBMIT,
+      view: SubmitIdea,
     },
   ];
 

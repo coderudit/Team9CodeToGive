@@ -26,6 +26,8 @@ class AddPost extends Component {
             title: '',
             body: ''
         })
+
+        
     }
 
     

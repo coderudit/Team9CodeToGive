@@ -99,6 +99,9 @@ const Navbar = () => {
               {/* <MenuItem onClick={() => navigate(ROUTES.PROPERTY_LISTING)}>
                 <Typography textAlign="center">Book Professionals</Typography>
               </MenuItem> */}
+              {/* <MenuItem onClick={() => navigate(ROUTES.IDEASUBMIT)}>
+                <Typography textAlign="center">Submit Idea</Typography>
+              </MenuItem> */}
               <MenuItem onClick={() => navigate(ROUTES.VIEW_SERVICES)}>
                 <Typography textAlign="center">Feed</Typography>
               </MenuItem>
@@ -119,6 +122,18 @@ const Navbar = () => {
               Book Professionals
             </Button>
           </Box> */}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={(handleClick) => navigate(ROUTES.IDEASUBMIT)}
+              sx={{ my: 2, color: "black", display: "block" }}
+            >
+              Submit Idea
+            </Button>
+          </Box>
           <Box sx={{ flexGrow: 18, display: { xs: "none", md: "flex" } }}>
             <Button
               id="basic-button"

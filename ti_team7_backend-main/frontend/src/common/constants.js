@@ -15,7 +15,8 @@ export const ROUTES = {
   FEED: "/feed",
   PAYMENTS: "/checkout/payments",
   PAYMENTINFOFORM:"/paymentinfoform",
-  ORDERPLACED: "/orderplaced"
+  ORDERPLACED: "/orderplaced",
+  IDEASUBMIT: "/ideasubmit",
 };
 
 /* Authentication */
