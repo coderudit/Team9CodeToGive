@@ -1,0 +1,10 @@
+version: "2"
+services:
+    chatroom:
+        image: parthshahk/codetogive-backend
+        restart: always
+        environment:
+            - VIRTUAL_HOST=ec2-35-182-187-22.ca-central-1.compute.amazonaws.com
+            - LETSENCRYPT_HOST=ec2-35-182-187-22.ca-central-1.compute.amazonaws.com
+            - LETSENCRYPT_EMAIL=parthshahk@gmail.com
+            - VIRTUAL_PORT=3000
