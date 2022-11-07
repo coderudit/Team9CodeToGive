@@ -1,5 +1,3 @@
-// Author: Anuj Dev (B00900887)
-
 import React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";

@@ -1,5 +1,3 @@
-/* Author: Sai Sandeep Mutyala (B00872239) */
-
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../common/constants";

@@ -1,11 +1,3 @@
-/**
- *
- * @version 1.0
- * @author [Chandan Shukla](chandan.shukla@dal.ca)
- */
-
-
-
  import React, {useEffect, useRef} from 'react';
  import Box from '@mui/material/Box';
  import Paper from '@mui/material/Paper';

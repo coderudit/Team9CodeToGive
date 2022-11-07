@@ -3,24 +3,37 @@ import { makeStyles } from "@material-ui/core/styles";
 import NewIdea from '../../Components/NewIdea';
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
+import Navbar from '../../Components/NavigationBar/Navbar';
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
     custom: {
       color: "#00EE00",
       fontWeight: "bold"
-    }
+    },
+    root: {
+        background: "#1A374D",
+        border: 0,
+        color: 'white',
+        height: 40,
+        fontSize: 18,
+        textTransform: 'none',
+        fontWeight: 600,
+        "&:hover": {
+          background: "#6998AB",
+          color: "#fff"
+        }
+      },
   });
 
-const SubmitIdea = () => {
 
+const SubmitIdea = () => {
+    const buttonStyle = useStyles();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
     let userDetails ;
 
-    // console.log(title, description, category);
-
-    // function to make post  request to backend to save the idea using axios
     const submitIdea = () => {
 
         if("USER" in localStorage){
@@ -35,7 +48,7 @@ const SubmitIdea = () => {
         };
 
         console.log(title, description, category);
-        axios.post('http://localhost:5000/ideas', newIdea)
+        axios.post('/api/posts/addPost', newIdea)
         .then((response) => {
             if(response && response.data){
                 window.location.href = "/";
@@ -50,20 +63,25 @@ const SubmitIdea = () => {
 
     return (
         <div>
+            <Navbar />  
             <Grid container
             alignItems="center"
             justifyContent="center"
             direction="column"
             spacing={10}
             >
-                <Grid item sx={20} mt={10}>
-                    <Grid>Idea Page</Grid>
+                <Grid item sx={{pt: 200}} >
+                    <h1 style={{ marginTop: "100px" }}>Idea Page</h1>
                 </Grid>
-                <Grid item sx={20} mt={5}>
+                <Grid item sx={{borderRadius: 2, boxShadow: 2}}
+                >
                     <NewIdea setTitle={setTitle} setDescription={setDescription} setCategory={setCategory} />
                 </Grid>
-                <Grid item sx={20} mt={5}>
-                    <button onClick={submitIdea}>Submit Idea</button>
+                <Grid item sx={20}>
+                    {/* <button onClick={submitIdea}></button> */}
+                    <Button variant="contained" className={buttonStyle.root} onClick={submitIdea} type="submit">
+                        Submit Idea
+                    </Button>
                 </Grid>
                 
             </Grid>

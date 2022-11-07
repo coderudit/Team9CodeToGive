@@ -1,5 +1,3 @@
-// Author: Sai Sandeep Mutyala (B00872239)
-
 import * as React from 'react';
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';

@@ -5,7 +5,7 @@ const {
   getAllPosts,
   getPostByEmail,
 } = require("../controllers/postsController");
-router.post("/", addPost);
-router.get("/", getAllPosts);
+router.post("/addPost", addPost);
+router.get("/getAllPosts", getAllPosts);
 router.get("/:email", getPostByEmail);
 module.exports = router;

@@ -134,6 +134,18 @@ const Navbar = () => {
               Submit Idea
             </Button>
           </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={(handleClick) => navigate(ROUTES.TRENDINGIDEAS)}
+              sx={{ my: 2, color: "black", display: "block" }}
+            >
+              Trending Ideas
+            </Button>
+          </Box>
           <Box sx={{ flexGrow: 18, display: { xs: "none", md: "flex" } }}>
             <Button
               id="basic-button"
@@ -159,7 +171,7 @@ const Navbar = () => {
               <Button
                 variant="contained"
                 sx={{
-                  backgroundColor: "#1f9264",
+                  backgroundColor: "#1A374D",
                   display: { md: "flex" },
                 }}
                 onClick={() => navigate(ROUTES.LOGIN)}

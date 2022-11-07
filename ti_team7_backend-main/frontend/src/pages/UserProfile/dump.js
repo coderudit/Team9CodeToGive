@@ -6,8 +6,8 @@ let groups = [
     groupDesc:
       "It's a group to check the mental health status of friends! The goal is to play games together and communicate online.",
     groupMembers: [
-      { id: "3", email: "user@name.ca", name: "Aeshna Verma" },
-      { id: "4", email: "user4@name.ca", name: "Julia " },
+      { id: "3", email: "user@name.ca", name: "Chandan Shukla" },
+      { id: "4", email: "user4@name.ca", name: "Udit Gandhi " },
     ],
     advisor: { id: "11", email: "expert1@dal.ca", name: "expert1" },
   },
@@ -18,8 +18,8 @@ let groups = [
     groupDesc:
       "Happy Family Making Project!\n" +
         "Let's check our family's mental health and share problems and happiness with each other through regular online meetings!",
-    groupMembers: [{ id: "5", email: "user5@name.ca", name: "user5" }],
-    advisor: { id: "11", email: "expert1@dal.ca", name: "expert1" },
+    groupMembers: [{ id: "5", email: "user5@name.ca", name: "Parth shah" }],
+    advisor: { id: "11", email: "expert1@dal.ca", name: "Chandan Shukla" },
   },
   {
     groupId: "3",
@@ -27,8 +27,8 @@ let groups = [
     groupImg: "https://picsum.photos/id/180/202",
     groupDesc:
       "Let's share the difficulties that arise at school and talk about how to relieve stress!",
-    groupMembers: [{ id: "6", email: "user6@name.ca", name: "user6" }],
-    advisor: { id: "12", email: "expert2@dal.ca", name: "expert2" },
+    groupMembers: [{ id: "6", email: "user6@name.ca", name: "Udit Gandhi" }],
+    advisor: { id: "12", email: "expert2@dal.ca", name: "Grace Gong" },
   },
   {
     groupId: "4",

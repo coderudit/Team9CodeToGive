@@ -1,5 +1,3 @@
- /* Author: Sai Sandeep Mutyala (B00872239) */
-
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import TextField from '@mui/material/TextField';

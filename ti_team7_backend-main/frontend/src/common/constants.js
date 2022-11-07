@@ -1,5 +1,3 @@
-// Author: Anuj Dev (B00900887)
-
 /* ROUTERS  */
 export const ROUTES = {
   // COMMON ROUTES
@@ -17,6 +15,7 @@ export const ROUTES = {
   PAYMENTINFOFORM:"/paymentinfoform",
   ORDERPLACED: "/orderplaced",
   IDEASUBMIT: "/ideasubmit",
+  TRENDINGIDEAS: "/trendingideas",
 };
 
 /* Authentication */

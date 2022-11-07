@@ -1,10 +1,3 @@
-/**
- *
- * @version 1.0
- * @author [Chandan Shukla](chandan.shukla@dal.ca)
- */
-
-
 import React, {useState} from 'react'
 // import {Card} from 'react-bootstrap';
 import Radio from '@mui/material/Radio';
