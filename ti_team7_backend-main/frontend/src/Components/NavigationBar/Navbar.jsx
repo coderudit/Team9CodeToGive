@@ -146,6 +146,18 @@ const Navbar = () => {
               Trending Ideas
             </Button>
           </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={(handleClick) => window.location.href = "https://gregarious-sunflower-12488a.netlify.app/meeting"}
+              sx={{ my: 2, color: "black", display: "block" }}
+            >
+              Video Meet
+            </Button>
+          </Box>
           <Box sx={{ flexGrow: 18, display: { xs: "none", md: "flex" } }}>
             <Button
               id="basic-button"

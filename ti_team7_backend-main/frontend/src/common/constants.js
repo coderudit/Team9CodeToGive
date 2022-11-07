@@ -16,6 +16,7 @@ export const ROUTES = {
   ORDERPLACED: "/orderplaced",
   IDEASUBMIT: "/ideasubmit",
   TRENDINGIDEAS: "/trendingideas",
+  VIDEOMEET: "/videomeet",
 };
 
 /* Authentication */
