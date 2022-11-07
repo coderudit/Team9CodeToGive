@@ -1,5 +1,3 @@
-// Author: Anuj Dev (B00900887)
-
 const express = require("express");
 const {
   registrationValidationRules,

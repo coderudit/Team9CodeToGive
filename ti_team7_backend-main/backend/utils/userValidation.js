@@ -1,5 +1,3 @@
-// Author: Anuj Dev (B00900887)
-
 const { body, validationResult, param } = require("express-validator");
 
 const registrationValidationRules = () => {

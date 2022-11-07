@@ -1,5 +1,3 @@
-// Author: Anuj Dev (B00900887)
-
 const mongoose = require("mongoose");
 
 const UsersSchema = new mongoose.Schema(

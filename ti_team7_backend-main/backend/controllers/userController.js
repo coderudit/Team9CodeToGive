@@ -1,5 +1,3 @@
-// Author: Anuj Dev (B00900887)
-
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const users = require("../models/users/users");

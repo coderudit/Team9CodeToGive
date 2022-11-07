@@ -1,5 +1,3 @@
-//Author : Aeshna Verma (B00880776)
-
 const mongoose = require('mongoose');
 
 const FeedSchema = new mongoose.Schema(
