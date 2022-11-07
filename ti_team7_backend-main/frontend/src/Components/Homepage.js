@@ -11,15 +11,14 @@ const Homepage = () => {
         <div className={styles.banner}>
           <div className={styles.twoSection}></div>
           <div className={styles.twoSection}>
-            <h1>Happy Place: Mental Health Matters</h1>
+            <h1>MS Connect: Connecting Like Minds</h1>
             <p>
-              Facilitating peers support groups and aiding proffessional and
-              client connections
+              Facilitating a platform for like minded people to connect and share ideas
             </p>
           </div>
         </div>
 
-        <div className={styles.colorBanner}>
+        {/* <div className={styles.colorBanner}>
           <h1 className={styles.title}>What we offer</h1>
           <div className={styles.threeRow}>
             <div className={styles.threeSection}>
@@ -44,7 +43,7 @@ const Homepage = () => {
             <h1 className={styles.title}>Our Mission</h1>
             <p>Connecting, facilitating, supporting</p>
           </div>
-        </div>
+        </div> */}
 
         {/* <div className={styles.banner2}>
           <h1 className={styles.title}>Start today!</h1>

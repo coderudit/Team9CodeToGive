@@ -33,7 +33,7 @@ export default function AppFooter() {
       <Container sx={{ my: 8, display: "flex", flexDirection: "column" }}>
         <Grid container direction="column" justifyContent="flex-end">
           <Grid item sx={{ display: "flex", justifyContent: "center" }}>
-            <Box sx={pageStyle}>Happy Place Inc.© 2022</Box>
+            <Box sx={pageStyle}>MS Connect Inc.© 2022</Box>
           </Grid>
         </Grid>
         <Grid
