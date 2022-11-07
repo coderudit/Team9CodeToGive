@@ -102,7 +102,16 @@ const Navbar = () => {
               {/* <MenuItem onClick={() => navigate(ROUTES.IDEASUBMIT)}>
                 <Typography textAlign="center">Submit Idea</Typography>
               </MenuItem> */}
-              <MenuItem onClick={() => navigate(ROUTES.VIEW_SERVICES)}>
+              <MenuItem onClick={() => navigate(ROUTES.IDEASUBMIT)}>
+                <Typography textAlign="center">Submit Idea</Typography>
+              </MenuItem>
+              <MenuItem onClick={() => navigate(ROUTES.TRENDINGIDEAS)}>
+                <Typography textAlign="center">Trending Ideas</Typography>
+              </MenuItem>
+              <MenuItem onClick={() =>  window.location.href = "https://gregarious-sunflower-12488a.netlify.app/meeting"}>
+                <Typography textAlign="center">Video Meet</Typography>
+              </MenuItem>
+              <MenuItem onClick={() => navigate(ROUTES.FEED)}>
                 <Typography textAlign="center">Feed</Typography>
               </MenuItem>
             </Menu>
